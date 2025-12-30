@@ -1,5 +1,5 @@
 {
-    "version": "2.1.0",
-    "changelog": "- Первый релиз LX VPN 2.0\n- Split Tunneling\n- Kill Switch\n- DNS-over-HTTPS\n- Автоподключение\n- Запуск с Windows",
+    "version": "2.0.0",
+    "changelog": "LX VPN 2.0.0 - Стабильный релиз\n\n- Split Tunneling для выбранных сайтов\n- Kill Switch защита\n- DNS-over-HTTPS\n- Автоподключение при запуске\n- Запуск с Windows\n- Проверка обновлений\n- Современный интерфейс",
     "downloadUrl": "https://github.com/iNDiK4/lx-vpn-releases/releases/download/v2.0.0/LX_VPN.exe"
 }
