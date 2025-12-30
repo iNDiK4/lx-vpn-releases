@@ -13,6 +13,7 @@
 ---
 
 </div>
+<img width="900" height="1080" alt="lx_vpn_3d_style" src="https://github.com/user-attachments/assets/1b7d6863-a846-4ffa-b701-1e2b9a926280" />
 
 ## ✨ Возможности
 
