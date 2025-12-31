@@ -1,4 +1,5 @@
 <div align="center">
+<img width="206" height="206" alt="generated-image (1)" src="https://github.com/user-attachments/assets/177e926a-532b-4bb9-856c-c47b40c623a8" />
 
 # 🔐 LX VPN
 
