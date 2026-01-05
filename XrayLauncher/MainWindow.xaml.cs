@@ -36,10 +36,9 @@ namespace XrayLauncher
 
         private readonly string settingsPath;
         private readonly string blockedDomainsPath;
-        private readonly string vlessConfigPath;
         
-        // VLESS config loaded from file (not hardcoded to prevent git leak)
-        private string DEFAULT_VLESS;
+        // Hardcoded VLESS config
+        private const string DEFAULT_VLESS = "vless://98b3a3c8-57d0-4aa7-bd38-e7ff68b44b5c@45.90.99.219:16933?type=tcp&encryption=none&security=reality&pbk=5PaSG1WdFyCOzf3gXfhJ217PjXzKhIe8FiGJyTpRlkY&fp=chrome&sni=www.intel.com&sid=58b6423bfd&spx=%2F&flow=xtls-rprx-vision#yhra9r5o";
         
         private bool _vpnRunning;
         private bool _isConnecting;
@@ -126,10 +125,6 @@ namespace XrayLauncher
             string baseDir = AppDomain.CurrentDomain.BaseDirectory;
             settingsPath = System.IO.Path.Combine(baseDir, "settings.json");
             blockedDomainsPath = System.IO.Path.Combine(baseDir, "blocked-domains.txt");
-            vlessConfigPath = System.IO.Path.Combine(baseDir, "vless.secret");
-            
-            // Load VLESS config from file
-            LoadVlessConfig();
             
             // Initialize cached brushes to prevent memory leaks
             InitializeCachedBrushes();
@@ -195,40 +190,6 @@ namespace XrayLauncher
             spinnerTimer = new DispatcherTimer();
             spinnerTimer.Interval = TimeSpan.FromMilliseconds(16);
             spinnerTimer.Tick += SpinnerTimer_Tick;
-        }
-
-        private void LoadVlessConfig()
-        {
-            try
-            {
-                if (File.Exists(vlessConfigPath))
-                {
-                    DEFAULT_VLESS = File.ReadAllText(vlessConfigPath).Trim();
-                    if (!DEFAULT_VLESS.StartsWith("vless://"))
-                    {
-                        throw new Exception("Invalid VLESS config format");
-                    }
-                }
-                else
-                {
-                    // Fallback - show error, config file required
-                    System.Windows.MessageBox.Show(
-                        "Файл vless.secret не найден!\n\nСоздайте файл vless.secret в папке приложения с вашим VLESS URL.",
-                        "Ошибка конфигурации",
-                        MessageBoxButton.OK,
-                        MessageBoxImage.Error);
-                    DEFAULT_VLESS = "";
-                }
-            }
-            catch (Exception ex)
-            {
-                System.Windows.MessageBox.Show(
-                    "Ошибка загрузки vless.secret: " + ex.Message,
-                    "Ошибка",
-                    MessageBoxButton.OK,
-                    MessageBoxImage.Error);
-                DEFAULT_VLESS = "";
-            }
         }
 
         private void LoadBlockedDomains()
