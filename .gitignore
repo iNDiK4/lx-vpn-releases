@@ -1,0 +1,26 @@
+# Build outputs
+bin/
+obj/
+Output/
+installer_output/
+
+# IDE
+.vs/
+*.user
+*.suo
+
+# Large binary files
+*.exe
+*.dat
+
+# Temp files
+*.tmp
+~*
+
+# SECRET CONFIG - NEVER COMMIT!
+*.secret
+vless.secret
+config.secret
+
+# Local updates folder
+updates/
