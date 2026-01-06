@@ -1,10 +1,15 @@
-# Ignore everything
+# Ignore everything by default
 *
 
-# Except updates folder
-!updates/
-!updates/version.json
-!updates/README.md
+# Unignore directories (crucial for git to look inside folders)
+!*/
 
-# And gitignore itself
+# Allow updates folder and everything inside
+!updates/
+!updates/**
+
+# Allow root version file
+!version.json
+
+# Allow gitignore itself
 !.gitignore
