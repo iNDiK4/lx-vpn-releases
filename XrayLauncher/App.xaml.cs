@@ -8,7 +8,7 @@ namespace XrayLauncher
     public partial class App : Application
     {
         // Centralized version - change here to update everywhere
-        public static readonly string Version = "2.3.0";
+        public static readonly string Version = "2.4.0";
         public static readonly string AppName = "LX VPN";
         
         // Mutex for single instance

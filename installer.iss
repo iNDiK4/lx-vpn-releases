@@ -1,6 +1,6 @@
 ; LX VPN Installer Script
 #define MyAppName "LX VPN"
-#define MyAppVersion "2.2.0"
+#define MyAppVersion "2.4.0"
 #define MyAppPublisher "LX VPN"
 #define MyAppURL "https://github.com/iNDiK4/lx-vpn-releases"
 #define MyAppExeName "LX VPN.exe"

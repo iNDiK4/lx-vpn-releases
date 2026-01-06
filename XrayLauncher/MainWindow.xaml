@@ -368,7 +368,7 @@
                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left">
                             <TextBlock Text="LX VPN" FontSize="16" FontWeight="SemiBold" Foreground="White"/>
                             <Border Background="#10b981" CornerRadius="4" Padding="8,3" Margin="15,0,0,0">
-                                <TextBlock x:Name="HeaderVersionLabel" Text="v2.2.0" FontSize="10" Foreground="White" FontWeight="SemiBold"/>
+                                <TextBlock x:Name="HeaderVersionLabel" Text="v2.4.0" FontSize="10" Foreground="White" FontWeight="SemiBold"/>
                             </Border>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
@@ -584,6 +584,20 @@
                                                     <StackPanel VerticalAlignment="Center">
                                                         <TextBlock Text="Discord" FontSize="14" FontWeight="SemiBold" Foreground="White"/>
                                                         <TextBlock Text="discord.com, discordapp.com" FontSize="11" Foreground="#666"/>
+                                                    </StackPanel>
+                                                </StackPanel>
+                                            </Border>
+                                            
+                                            <!-- Telegram -->
+                                            <Border Style="{StaticResource SiteCard}">
+                                                <StackPanel Orientation="Horizontal">
+                                                    <CheckBox x:Name="ChkTelegram" IsChecked="True" VerticalAlignment="Center" Cursor="Hand"/>
+                                                    <Border Background="#2AABEE" CornerRadius="8" Width="36" Height="36" Margin="12,0">
+                                                        <TextBlock Text="✈" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                    </Border>
+                                                    <StackPanel VerticalAlignment="Center">
+                                                        <TextBlock Text="Telegram" FontSize="14" FontWeight="SemiBold" Foreground="White"/>
+                                                        <TextBlock Text="telegram.org, t.me" FontSize="11" Foreground="#666"/>
                                                     </StackPanel>
                                                 </StackPanel>
                                             </Border>

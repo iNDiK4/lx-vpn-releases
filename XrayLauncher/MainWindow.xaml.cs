@@ -98,6 +98,7 @@ namespace XrayLauncher
         private static readonly Dictionary<string, List<string>> SplitDomains = new Dictionary<string, List<string>>
         {
             { "Discord", new List<string> { "discord.com", "discordapp.com", "discord.gg", "discordapp.net", "discord.media", "discord.dev", "discordcdn.com", "gateway.discord.gg", "cdn.discordapp.com", "media.discordapp.net" } },
+            { "Telegram", new List<string> { "telegram.org", "telegram.me", "t.me", "web.telegram.org", "telegram-cdn.org", "cdn-telegram.org" } },
             { "YouTube", new List<string> { "youtube.com", "googlevideo.com", "ytimg.com", "youtu.be", "ggpht.com", "gstatic.com", "googleapis.com", "youtube-nocookie.com", "youtubekids.com" } },
             { "Twitter", new List<string> { "twitter.com", "x.com", "twimg.com", "t.co", "twittercdn.com" } },
             { "Instagram", new List<string> { "instagram.com", "cdninstagram.com", "fbcdn.net" } },
@@ -1131,6 +1132,7 @@ namespace XrayLauncher
             }
             
             if (ChkDiscord.IsChecked == true) domains.AddRange(SplitDomains["Discord"]);
+            if (ChkTelegram.IsChecked == true) domains.AddRange(SplitDomains["Telegram"]);
             if (ChkYouTube.IsChecked == true) domains.AddRange(SplitDomains["YouTube"]);
             if (ChkTwitter.IsChecked == true) domains.AddRange(SplitDomains["Twitter"]);
             if (ChkInstagram.IsChecked == true) domains.AddRange(SplitDomains["Instagram"]);
