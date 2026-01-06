@@ -1,0 +1,10 @@
+# Ignore everything
+*
+
+# Except updates folder
+!updates/
+!updates/version.json
+!updates/README.md
+
+# And gitignore itself
+!.gitignore
